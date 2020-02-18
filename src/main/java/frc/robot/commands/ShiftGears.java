@@ -4,9 +4,9 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
-public class ShootOut extends Command {
-  public ShootOut() {
-    requires(Robot.hood);
+public class ShiftGears extends Command {
+  public ShiftGears() {
+    requires(Robot.pneumatics);
   }
 
   @Override
@@ -15,7 +15,7 @@ public class ShootOut extends Command {
 
   @Override
   protected void execute() {
-    Robot.hood.ShootBall(1);
+    Robot.pneumatics.shiftGears( 0.5, 1);
   }
 
   @Override
@@ -25,7 +25,6 @@ public class ShootOut extends Command {
 
   @Override
   protected void end() {
-    Robot.hood.ShootBall(0);
   }
 
   @Override

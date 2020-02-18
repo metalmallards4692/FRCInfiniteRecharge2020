@@ -11,27 +11,22 @@ public class IntakeIn extends Command {
 
   @Override
   protected void initialize() {
-
   }
-
 
   @Override
   protected void execute() {
     Robot.intake.TakeBall(1);
   }
 
-
   @Override
   protected boolean isFinished() {
     return false;
   }
 
-
   @Override
   protected void end() {
     Robot.intake.TakeBall(0);
   }
-
 
   @Override
   protected void interrupted() {

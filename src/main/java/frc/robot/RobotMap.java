@@ -3,23 +3,35 @@ package frc.robot;
 
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 
 public class RobotMap {
 //Drive Motors
   public static int rightMotor = 12;
   public static int leftMotor = 13;
+
   //Slave Motors
     public static int rightSlave = 14;
     public static int leftSlave = 15;
+
+//Victor Motors
+  public static int colorWheel = 26;
+  public static int climbWheel = 27;
+
 //Intake Motors
   public static int intakeMotor = 5;
+
 //Shooting Motor
   public static int shootMotor = 6;
+
 //Joysticks
   public static int rightJoystick = 0;
   public static int leftJoystick = 1;
+
 //Gamepad
   public static int gamepad = 2;
+
   //Gamepad Buttons
     public static int GamepadA = 2;
     public static int GamepadB = 3;
@@ -39,4 +51,7 @@ public class RobotMap {
   public static CANSparkMax IntakeMotor = new CANSparkMax(RobotMap.intakeMotor, MotorType.kBrushless);
   public static CANSparkMax ShootMotor = new CANSparkMax(RobotMap.shootMotor, MotorType.kBrushless);
 
+//Pneumatics
+  public static DoubleSolenoid gearShifter;
+  public static Compressor cp;
 }

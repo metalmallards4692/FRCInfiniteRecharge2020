@@ -7,8 +7,6 @@ import frc.robot.RobotMap;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.robot.commands.*;
 
-
-
 public class OI {
 
   public final Joystick leftJoy = new Joystick(RobotMap.leftJoystick);
@@ -55,25 +53,24 @@ public class OI {
     gamepadL1 = new JoystickButton(gamepad, RobotMap.GamepadL1);
     gamepadR3 = new JoystickButton(gamepad, RobotMap.GamepadR3);
     
-
   //Command Calls
-    gamepadA.whileHeld(new IntakeIn());
-    gamepadA.whenReleased(new IntakeStop());
-    gamepadY.whileHeld(new ShootOut());
-    gamepadY.whenReleased(new ShootStop());
+    // gamepadA.whileHeld(new IntakeIn());
+    //gamepadA.whenReleased(new IntakeStop());
+    //gamepadY.whileHeld(new ShootOut());
+    //gamepadY.whenReleased(new ShootStop());
+    gamepadY.whenPressed(new ClimbDown());
+    gamepadA.whenPressed(new ClimbUp());
     gamepadB.whenPressed(new HoodUp());
     gamepadX.whenPressed(new HoodDown());
 
-  
-
+  //LimeLight Command Calls
     gamepadR1.whileHeld(new LimelightAimRange());
     gamepadR3.whileHeld(new LimeLightDrive());
     gamepadSelect.whileHeld(new LimeLightRange());
   
-
   //SmartDashboad
-  SmartDashboard.putData("LimeLightDrive", new LimeLightDrive());
-  SmartDashboard.putData("LimeLightAimRange", new LimelightAimRange());
-  SmartDashboard.putData("LimeLightRange", new LimeLightRange());
+    SmartDashboard.putData("LimeLightDrive", new LimeLightDrive());
+    SmartDashboard.putData("LimeLightAimRange", new LimelightAimRange());
+    SmartDashboard.putData("LimeLightRange", new LimeLightRange());
   }
 }

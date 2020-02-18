@@ -4,9 +4,9 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
-public class ShootOut extends Command {
-  public ShootOut() {
-    requires(Robot.hood);
+public class ClimbDriveStop extends Command {
+  public ClimbDriveStop() {
+    requires(Robot.climber);
   }
 
   @Override
@@ -15,7 +15,7 @@ public class ShootOut extends Command {
 
   @Override
   protected void execute() {
-    Robot.hood.ShootBall(1);
+    Robot.climber.ClimbDrive(0);
   }
 
   @Override
@@ -25,7 +25,7 @@ public class ShootOut extends Command {
 
   @Override
   protected void end() {
-    Robot.hood.ShootBall(0);
+    Robot.climber.ClimbDrive(0);
   }
 
   @Override

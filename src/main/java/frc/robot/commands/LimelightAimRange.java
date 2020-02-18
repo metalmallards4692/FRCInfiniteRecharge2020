@@ -6,7 +6,7 @@ import frc.robot.Robot;
 
 public class LimelightAimRange extends Command {
 
-    private double kpAim = 0.05;
+    private double kpAim = -0.05;
     private double kpDistance = 0.05;
     private double m_moveValue;
     private double m_rotateValue;
@@ -15,11 +15,9 @@ public class LimelightAimRange extends Command {
     requires(Robot.driveTrain);
   }
 
-
   @Override
   protected void initialize() {
   }
-
 
   @Override
   protected void execute() {
@@ -38,19 +36,16 @@ public class LimelightAimRange extends Command {
     Robot.driveTrain.MyTankDrive(m_moveValue, m_rotateValue);
 
   }
-
  
   @Override
   protected boolean isFinished() {
     return false;
   }
-
  
   @Override
   protected void end() {
     Robot.driveTrain.MyTankDrive(0,0);
   }
-
  
   @Override
   protected void interrupted() {

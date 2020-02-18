@@ -10,11 +10,9 @@ public class IntakeStop extends Command {
    requires(Robot.intake);
   }
 
-
   @Override
   protected void initialize() {
   }
-
 
   @Override
   protected void execute() {

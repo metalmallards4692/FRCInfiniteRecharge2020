@@ -9,28 +9,23 @@ public class HoodDown extends Command {
     requires(Robot.hood);
   }
 
-
   @Override
   protected void initialize() {
   }
-
 
   @Override
   protected void execute() {
     Robot.hood.HoodDown();
   }
 
-
   @Override
   protected boolean isFinished() {
     return false;
   }
 
-
   @Override
   protected void end() {
   }
-
 
   @Override
   protected void interrupted() {

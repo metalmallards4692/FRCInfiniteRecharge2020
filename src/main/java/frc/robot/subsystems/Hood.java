@@ -10,11 +10,12 @@ import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 public class Hood extends Subsystem {
   CANSparkMax shootMotor = RobotMap.ShootMotor;
   private DoubleSolenoid HoodCylinders;
+ // private DoubleSolenoid ClimbCylinders;
 
   public Hood() {
     HoodCylinders = new DoubleSolenoid(0,0,1);
+   // ClimbCylinders = new DoubleSolenoid(2,0,1);
     HoodCylinders.set(Value.kOff);
-
   }
 
   public void ShootBall(double output) {
@@ -29,8 +30,17 @@ public class Hood extends Subsystem {
     HoodCylinders.set(DoubleSolenoid.Value.kReverse);
   }
 
+  /*public void ArmOut() {
+    ClimbCylinders.set(DoubleSolenoid.Value.kForward);
+  }
+
+  public void ArmIn() {
+    ClimbCylinders.set(DoubleSolenoid.Value.kReverse);
+  }
+*/
   @Override
   public void initDefaultCommand() {
     HoodCylinders.set(Value.kOff);
+    //ClimbCylinders.set(Value.kOff);
   }
 }
