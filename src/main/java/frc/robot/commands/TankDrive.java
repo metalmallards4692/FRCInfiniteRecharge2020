@@ -1,11 +1,7 @@
-
-
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
-
-
 
 public class TankDrive extends Command {
   public TankDrive() {
@@ -19,7 +15,6 @@ public class TankDrive extends Command {
   @Override
   protected void execute() {
     Robot.driveTrain.drive();
-    
   }
 
   @Override

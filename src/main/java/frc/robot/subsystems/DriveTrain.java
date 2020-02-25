@@ -31,7 +31,7 @@ public class DriveTrain extends Subsystem {
   }
 
   public void drive() {
-    leftMotor.set(Robot.m_oi.getLeftJoyY()); 
+    leftMotor.set(-Robot.m_oi.getLeftJoyY()); 
     rightMotor.set(Robot.m_oi.getRightJoyY());
    
   }
@@ -48,7 +48,7 @@ public class DriveTrain extends Subsystem {
 
   public void teleopDrive(double speed, double turn){
   }
-
+//Called by LimelightAim&Range command
   public void MyTankDrive(double xSpeed, double zRotation) {
     differentialDrive1.tankDrive(xSpeed, zRotation);
   }
