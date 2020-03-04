@@ -25,6 +25,7 @@ public class DriveTrain extends Subsystem {
 
   @Override
   public void initDefaultCommand() {
+    //If this doesnt fix DifferentialDrive error delete this line
     setDefaultCommand(new TankDrive());
     rightSlave.follow(rightMotor);
     leftSlave.follow(leftMotor);

@@ -16,14 +16,16 @@ public class RobotMap {
     public static int leftSlave = 15;
 
 //Victor Motors
-  public static int colorWheel = 26;
-  public static int climbWheel = 27;
+  //public static int climbFollower = 26;
+  //public static int climbWheel = 27;
+  //public static int indexerMotor = 28;
 
 //Intake Motors
-  public static int intakeMotor = 5;
+  public static int intakeMotor = 6;
 
 //Shooting Motor
-  public static int shootMotor = 6;
+  public static int shootMotor = 8;
+  public static int shootRight = 5;
 
 //Joysticks
   public static int rightJoystick = 0;
@@ -50,6 +52,7 @@ public class RobotMap {
   public static CANSparkMax LeftSlave = new CANSparkMax(RobotMap.leftSlave, MotorType.kBrushless);
   public static CANSparkMax IntakeMotor = new CANSparkMax(RobotMap.intakeMotor, MotorType.kBrushless);
   public static CANSparkMax ShootMotor = new CANSparkMax(RobotMap.shootMotor, MotorType.kBrushless);
+  public static CANSparkMax ShootRight = new CANSparkMax(RobotMap.shootRight, MotorType.kBrushless);
 
 //Pneumatics
   public static DoubleSolenoid gearShifter;

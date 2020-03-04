@@ -2,10 +2,12 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj.Joystick;
 import frc.robot.RobotMap;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.robot.commands.*;
+import frc.robot.subsystems.Intake;
 
 public class OI {
 
@@ -53,15 +55,20 @@ public class OI {
     gamepadL1 = new JoystickButton(gamepad, RobotMap.GamepadL1);
     gamepadR3 = new JoystickButton(gamepad, RobotMap.GamepadR3);
     
+
   //Command Calls
     // gamepadA.whileHeld(new IntakeIn());
     //gamepadA.whenReleased(new IntakeStop());
     //gamepadY.whileHeld(new ShootOut());
     //gamepadY.whenReleased(new ShootStop());
-    gamepadY.whenPressed(new ClimbDown());
-    gamepadA.whenPressed(new ClimbUp());
-    gamepadB.whenPressed(new HoodUp());
-    gamepadX.whenPressed(new HoodDown());
+    gamepadY.whileHeld(new ShootOut());
+    gamepadY.whenReleased(new ShootStop());
+    gamepadA.whileHeld(new IntakeIn());
+    gamepadA.whenReleased(new IntakeStop());
+    //gamepadB.whileHeld(new IndexOn());
+    //gamepadX.whenPressed(new InstantCommand(IntakeSlide::execute));
+    //gamepadX.whenPressed(new InstantCommand(Robot.intake::IntakeSlideInOut));
+    gamepadX.whenPressed(new IntakeSlide());
 
   //LimeLight Command Calls
     gamepadR1.whileHeld(new LimelightAimRange());

@@ -21,6 +21,8 @@ public class Robot extends TimedRobot {
   public static Hood hood = new Hood();
   public static Climber climber = new Climber();
   public static Pneumatics pneumatics = new Pneumatics();
+  //public static Index indexer = new Index();
+  //public static Index index = new Index();
   public static Auto autonomous;
   private Command TankDrive;
   private CANSparkMax rightMotor = RobotMap.RightMotor;
