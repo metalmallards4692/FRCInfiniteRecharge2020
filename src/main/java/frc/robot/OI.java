@@ -54,26 +54,20 @@ public class OI {
 		gamepadR1 = new JoystickButton(gamepad, RobotMap.GamepadR1);
     gamepadL1 = new JoystickButton(gamepad, RobotMap.GamepadL1);
     gamepadR3 = new JoystickButton(gamepad, RobotMap.GamepadR3);
-    
+    gamepadL3 = new JoystickButton(gamepad, RobotMap.GamepadL3);
 
   //Command Calls
-    // gamepadA.whileHeld(new IntakeIn());
-    //gamepadA.whenReleased(new IntakeStop());
-    //gamepadY.whileHeld(new ShootOut());
-    //gamepadY.whenReleased(new ShootStop());
     gamepadY.whileHeld(new ShootOut());
     gamepadY.whenReleased(new ShootStop());
     gamepadA.whileHeld(new IntakeIn());
     gamepadA.whenReleased(new IntakeStop());
-    //gamepadB.whileHeld(new IndexOn());
-    //gamepadX.whenPressed(new InstantCommand(IntakeSlide::execute));
-    //gamepadX.whenPressed(new InstantCommand(Robot.intake::IntakeSlideInOut));
     gamepadX.whenPressed(new IntakeSlide());
+    gamepadR3.whenPressed(new HoodUp());
+    gamepadL3.whenPressed(new HoodDown());
 
   //LimeLight Command Calls
-    gamepadR1.whileHeld(new LimelightAimRange());
-    gamepadR3.whileHeld(new LimeLightDrive());
-    gamepadSelect.whileHeld(new LimeLightRange());
+    gamepadStart.whileHeld(new LimelightAimRange());
+ 
   
   //SmartDashboad
     SmartDashboard.putData("LimeLightDrive", new LimeLightDrive());

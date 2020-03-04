@@ -43,7 +43,8 @@ public class RobotMap {
     public static int GamepadR1 = 6;           
     public static int GamepadSelect = 7;
     public static int GamepadStart = 8;
-    public static int GamepadR3 = 12;
+    public static int GamepadR3 = 11;
+    public static int GamepadL3 = 12;
 
 //Spark Motors
   public static CANSparkMax RightMotor = new CANSparkMax(RobotMap.rightMotor, MotorType.kBrushless);
